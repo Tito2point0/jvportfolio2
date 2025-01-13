@@ -28,9 +28,14 @@ const Hero = () => {
               Dynamic Web Magic with next.js
             </h2>
             <TextGenerateEffect
-              className="text-center text-[40px] md:text-5xl lg:text-6xl " 
+              className="text-center text-[40px] 
+              md:text-5xl lg:text-6xl " 
               words="Innovation Dedication and Passion"
             />
+            
+            <p className="text-center text-[40px] md:text-5xl lg-text-6xl "> 
+               Hi I&apos;m Jason a Full-stack Web developer based in NYC.
+            </p>
           </div>
         </div>
       </div>
