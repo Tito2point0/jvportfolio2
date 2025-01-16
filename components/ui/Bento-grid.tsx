@@ -1,5 +1,10 @@
+"use client";
+
+import { useState } from "react";
 import { cn } from "../utils/cn";
 import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
+import animationData from "@/data/confetti.json";
+import Lottie from "react-lottie";
 
 export const BentoGrid = ({
   className,
@@ -41,32 +46,32 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
+  const [copied, setCopied] = useState(false);
+
   return (
     <div
       id={`bento-grid-item-${id}`}
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4",
-        "dark:bg-black dark:border-white/[0.2] bg-white border-transparent flex flex-col space-y-4 border-2 justify-between",
+        "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition py-5 duration-200 shadow-input dark:shadow-none ",
+        " bg-white border-transparent flex flex-col space-y-4 border-2 justify-between",
         className
       )}
       style={{
-        // 1) Keep the original background gradient but reduce opacity so images show through
-        //    or remove it if you want the image fully visible. Adjust to your taste:
         background:
           "linear-gradient(90deg, rgba(8,42,110,0.7) 18%, rgba(22,128,162,0.6) 40%, rgba(14,73,80,0.5) 56%, rgba(19,70,73,0.8) 78%)",
-
-        // 2) For the first box, give more height so the image is larger
         minHeight: id === 1 ? "24rem" : "auto",
       }}
     >
       {/* BackgroundGradientAnimation for Box 6 */}
       {id === 6 && (
         <BackgroundGradientAnimation>
-          <div className="absolute z-50 flex items-center justify-center text-white font-bold" />
+          <div className="absolute inset-0 z-40 flex items-center justify-center font-bold text-3xl text-pink-300">
+          
+          </div>
         </BackgroundGradientAnimation>
       )}
 
-      {/* Spare Image for Box 5 (Behind everything, but visible if partially transparent) */}
+      {/* Spare Image for Box 5 */}
       {spareImg && id === 5 && (
         <div className="absolute inset-0 z-10 opacity-80 pointer-events-none">
           <img
@@ -77,7 +82,7 @@ export const BentoGridItem = ({
         </div>
       )}
 
-      {/* Main Image Layer (z-20 so it's above the gradient but below content) */}
+      {/* Main Image Layer */}
       {img && (
         <div className="absolute inset-0 z-20 pointer-events-none">
           <img
@@ -91,28 +96,25 @@ export const BentoGridItem = ({
         </div>
       )}
 
-      {/* Content Layer (z-30 so text is above images and gradient) */}
+      {/* Content Layer */}
       <div
         className={cn(
           "relative z-30 group-hover/bento:translate-x-2 transition duration-200",
           titleClassName
         )}
       >
-        {/* Description */}
         {description && (
           <div className="font-sans font-normal text-[#c1c2d3] text-sm dark:text-neutral-300 md:text-xs lg:text-base z-10">
             {description}
           </div>
         )}
 
-        {/* Title */}
         {title && (
-          <div className="font-sans font-extralight text-lg lg:text-3xl max-w-96 z-10 mt-2 text-white">
+          <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10 mt-2 text-white">
             {title}
           </div>
         )}
 
-        {/* Sample Tech Stack for Box 3 */}
         {id === 3 && (
           <div className="flex gap-2 mt-3">
             {["React.js", "Next.js", "TailwindCSS", "TypeScript"].map((item) => (
@@ -123,6 +125,27 @@ export const BentoGridItem = ({
                 {item}
               </span>
             ))}
+          </div>
+        )}
+
+        {id === 6 && (
+          <div className="mt-5 relative">
+            <div
+              className="absolute -bottom-5 right-0 z-50 pointer-events-none"
+              style={{ width: "100px", height: "100px" }}
+            >
+              <Lottie
+                options={{
+                  loop: true,
+                  autoplay: true,
+                  animationData,
+                  rendererSettings: {
+                    preserveAspectRatio: "xMidYMid slice",
+                  },
+                }}
+                isStopped={!copied}
+              />
+            </div>
           </div>
         )}
       </div>
