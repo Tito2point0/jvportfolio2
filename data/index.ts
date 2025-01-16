@@ -8,11 +8,14 @@ export const navItems = [
   export const gridItems = [
     {
       id: 1,
-      title: "I prioritize client collaboration, fostering open communication ",
+      title: "I prioritize client collaboration, fostering open communication",
       description: "",
+      // Make the first box span multiple rows/columns so it's larger:
       className: "lg:col-span-2 md:col-span-4 md:row-span-3 lg:min-h-[40vh]",
-      imgClassName: "w-24 h-24",
+      // Use object-cover to fill the container; remove w-24 h-24:
+      imgClassName: "object-cover w-full h-full",
       titleClassName: "justify-end",
+      // Path to your big laptop photo in the public folder:
       img: "/b1.svg",
       spareImg: "",
     },
