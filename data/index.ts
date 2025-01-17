@@ -14,8 +14,8 @@ export const navItems = [
       className: "lg:col-span-2 md:col-span-4 md:row-span-3 lg:min-h-[40vh]",
       // Use object-cover to fill the container; remove w-24 h-24:
       imgClassName: "object-cover w-full h-full",
-      titleClassName: "justify-end",
-      // Path to your big laptop photo in the public folder:
+      titleClassName: "justify-end px-3",
+      // Path to your big laptop photo \in the public folder:
       img: "/b1.svg",
       spareImg: "",
     },
@@ -25,7 +25,7 @@ export const navItems = [
         description: "",
         className: "lg:col-span-2 md:col-span-3 md:row-span-1", // Placed side-by-side
         imgClassName: "",
-        titleClassName: "justify-start",
+        titleClassName: "justify-start px-3",
       img: "/nasa2.jpg",
         spareImg: "",
       },
@@ -35,7 +35,7 @@ export const navItems = [
         description: "I constantly try to improve",
         className: "lg:col-span-2 md:col-span-3 md:row-span-1", // Placed side-by-side
         imgClassName: "",
-        titleClassName: "justify-center",
+        titleClassName: "justify-center px-3",
         img: "/keyboard.jpg",
         spareImg: "",
       },
@@ -45,7 +45,7 @@ export const navItems = [
       description: "",
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",
-      titleClassName: "justify-start",
+      titleClassName: "justify-start px-5",
       img: "/grid.svg",
       spareImg: "/b4.svg",
     },
@@ -56,7 +56,7 @@ export const navItems = [
       // Double the height from h-48 to h-96
       className: "lg:col-span-2 md:col-span-3 md:row-span-1 h-96",
       imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-      titleClassName: "justify-center md:justify-start lg:justify-center",
+      titleClassName: "justify-center md:justify-start lg:justify-center px-3",
       img: "/b5.svg",
       spareImg: "/grid.svg",
     },
@@ -67,7 +67,7 @@ export const navItems = [
       // Double the height from h-48 to h-96
       className: "lg:col-span-2 md:col-span-3 md:row-span-1 h-96",
       imgClassName: "",
-      titleClassName: "justify-center md:max-w-full max-w-60 text-center",
+      titleClassName: "justify-center md:max-w-full max-w-60 text-center px-11",
       img: "",
       spareImg: "",
     },
