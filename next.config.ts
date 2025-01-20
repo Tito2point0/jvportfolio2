@@ -1,21 +1,20 @@
-import { NextConfig } from "next";
+import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Add your custom configuration options here
-  reactStrictMode: true, // Enables React Strict Mode
-  swcMinify: true, // Enables the SWC compiler for faster builds
+  reactStrictMode: true, // Enables React's Strict Mode
+  swcMinify: true, // Uses SWC for faster builds and smaller output
+  output: 'export', // Enables static export (replaces `next export`)
   eslint: {
-    ignoreDuringBuilds: true, // Ignores ESLint warnings during builds
+    ignoreDuringBuilds: true, // Ignores ESLint warnings/errors during builds
   },
   typescript: {
     ignoreBuildErrors: true, // Ignores TypeScript errors during builds
   },
   images: {
-    domains: ["example.com"], // Allow loading images from external domains
-    formats: ["image/webp"], // Support modern image formats
+    unoptimized: true, // Required for static export to work with `next/image`
   },
   experimental: {
-    // appDir: true, // Enable the new `app` directory for Next.js
+    appDir: true, // Enables the new App Router (`app` directory support)
   },
 };
 
