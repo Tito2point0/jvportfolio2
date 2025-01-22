@@ -97,7 +97,7 @@ export const navItems = [
       des: "PokéBlog is a fan-driven platform offering tips, guides, and vibrant community discussions to help trainers explore and connect with the world of Pokémon..",
       img: "/blogger.png",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-      link: "https://working-website1.vercel.app/",
+      link: "https://jasonspokebinder.vercel.app/",
     },
     {
       id: 4,
