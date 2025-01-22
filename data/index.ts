@@ -81,7 +81,7 @@ export const navItems = [
       des: "An effective project built around next.js for e-commerce for pokemon cards.",
       img: "/2poke-e.png",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-      link: "https://github.com/Tito2oint0/poke-e-commmerce",
+      link: "https://github.com/Tito2point0/poke-e-commmerce",
     },
     {
       id: 2,
@@ -89,7 +89,7 @@ export const navItems = [
       des: "A dedicated search engine designed to find and display all Pokémon from the Pokémon API database.",
       img: "/searchpoke.png",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-      link: "https://cardpokesearch.vercel.app/search",
+      link: "https://cardpokesearch.vercel.app/",
     },
     {
       id: 3,
