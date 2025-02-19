@@ -3,6 +3,7 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
 import {  VscCoffee } from "react-icons/vsc";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -39,14 +40,14 @@ const Hero = () => {
               Hello, I&apos;m Jason a full-stack Web developer based in NYC.
             </p>
 
-            <a href="#about">
+            <Link href="#about">
               <MagicButton
                 title="Show my work"
                 icon={<VscCoffee/>}
                 position="right"
               />
               
-            </a>
+            </Link>
           </div>
         </div>
       </div>
