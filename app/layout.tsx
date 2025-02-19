@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>Jasons Portfolio</title>
+        <title>Jason's Portfolio</title>
         <meta name="description" content="Jason's portfolio showcasing projects and skills" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
