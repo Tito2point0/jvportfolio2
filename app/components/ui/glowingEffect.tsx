@@ -94,7 +94,7 @@ const GlowingEffect = memo(({
     if (disabled) return;
 
     const handleScroll = (e: Event) => handleMove(e);
-    const handlePointerMove = (e) => handleMove(e);
+    const handlePointerMove = (e: PointerEvent) => handleMove(e);
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     document.body.addEventListener("pointermove", handlePointerMove, {
