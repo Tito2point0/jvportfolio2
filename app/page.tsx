@@ -1,9 +1,11 @@
 // import Grid from "./components/Grid";
 import Hero from "./components/Hero";
-// // import BugReportButton from "@/components/ui/BugReportButton";
+import BugReportButton from "./components/ui/BugReportButton";
 import { FloatingNav } from "./components/ui/floating-navbar";
 import RecentProjects from "./components/ui/RecentProjects";
 import { navItems } from "../data/index";
+import GlowingTestGrid from "./components/GlowingTestGrid"
+;
 
 // import Image from "next/image";
 
@@ -16,8 +18,9 @@ export default function Home() {
         />
         <Hero />
         {/* <Grid /> */}
+        <GlowingTestGrid />
         <RecentProjects />
-        {/* <BugReportButton /> */}
+        <BugReportButton />
         
       </div>
     </main>
