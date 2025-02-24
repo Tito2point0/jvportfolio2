@@ -1,6 +1,6 @@
 // import Grid from "./components/Grid";
 import Hero from "./components/Hero";
-import BugReportButton from "./components/ui/BugReportButton";
+// import BugReportButton from "./components/ui/BugReportButton";
 import { FloatingNav } from "./components/ui/floating-navbar";
 import RecentProjects from "./components/ui/RecentProjects";
 import { navItems } from "../data/index";
@@ -20,7 +20,7 @@ export default function Home() {
         {/* <Grid /> */}
         <GlowingTestGrid />
         <RecentProjects />
-        <BugReportButton />
+        {/* <BugReportButton /> */}
         
       </div>
     </main>

@@ -32,7 +32,12 @@ const GlowingEffect = memo(({
   const lastPosition = useRef({ x: 0, y: 0 });
   const animationFrameRef = useRef(0);
 
-  const handleMove = useCallback((e) => {
+  interface HandleMoveEvent extends Event {
+    x?: number;
+    y?: number;
+  }
+
+  const handleMove = useCallback((e: HandleMoveEvent) => {
     if (!containerRef.current) return;
 
     if (animationFrameRef.current) {
@@ -73,9 +78,7 @@ const GlowingEffect = memo(({
       const currentAngle =
         parseFloat(element.style.getPropertyValue("--start")) || 0;
       const targetAngle =
-        (180 * Math.atan2(mouseY - center[1], mouseX - center[0])) /
-          Math.PI +
-        90;
+        (180 * Math.atan2(mouseY - center[1], mouseX - center[0])) / Math.PI + 90;
 
       const angleDiff = ((targetAngle - currentAngle + 180) % 360) - 180;
       const newAngle = currentAngle + angleDiff;
@@ -83,7 +86,7 @@ const GlowingEffect = memo(({
       animate(currentAngle, newAngle, {
         duration: movementDuration,
         ease: [0.16, 1, 0.3, 1],
-        onUpdate: (value) => {
+        onUpdate: (value: number) => {
           element.style.setProperty("--start", String(value));
         },
       });
